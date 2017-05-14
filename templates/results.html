@@ -2,18 +2,40 @@
 <html>
 <head>
   <title>How to {{ task }}</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <h1>probablyHow to... {{ task }}</h1>
-  <ol>
+	<div class="container-fluid nav1 nav">
+		<div>
+		<img src="/probablyhow-logo.svg" class="logo1">
+		</div>
+		<div class="input-group col-md-4 hidden-sm-down">
+			...to {{ task }}
+		</div>
+	</div>
+
   {% for img, text in steps %}
-  <li>
-    <p>{{ text }}</p>
+	<div class="row">
+		<div class="col-sm-8 offset-sm-2 mt-5">
+		<div class="card">
+			<h3 class="card-header"></h3>
+			<div class="card-block">
+				<h4 class="card-title"></h4>
+				<p class="card-text">{{ text }}</p>
+			</div>
+		</div>
+		</div>
+	</div>
   </li>
   {% endfor %}
-  <ol>
+
 	<p id="disclaimer">
 	Text generated randomly from wikiHow.com content, used under Creative Commons license.
 	</p>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </body>
 </html>
