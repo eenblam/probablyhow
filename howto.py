@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from sys import argv
-from markov import rand_sentences_from_query
+from probablyhow.markov import rand_sentences_from_query
 
 query = ' '.join(argv[1:])
 results = rand_sentences_from_query(query, 5, 10)
