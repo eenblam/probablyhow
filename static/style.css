@@ -1,0 +1,86 @@
+.nav1 {
+  background-color: #93b874;
+  height: 75px;
+}
+.logo1 {
+  width: 20rem;
+  padding-top: 30px;
+  padding-left: 80px;
+}
+
+::-webkit-input-placeholder {
+   font-size: 1.3rem!important;
+   font-family: Helvetica-light;
+}
+
+#FORM_5 {
+    color: rgb(84, 84, 84);
+    height: 38px;
+    text-decoration: none solid rgb(84, 84, 84);
+    white-space: nowrap;
+    width: 1035px;
+    column-rule-color: rgb(84, 84, 84);
+    perspective-origin: 525px 34px;
+    transform-origin: 525px 34px;
+    caret-color: rgb(84, 84, 84);
+    border: 0px none rgb(84, 84, 84);
+    font: normal normal normal normal 16px / normal Helvetica, arial, sans-serif;
+    margin: 0px;
+    outline: rgb(84, 84, 84) none 0px;
+    padding: 15px 15px 15px 0px;
+}/*#FORM_5*/
+
+#INPUT_6 {
+    box-sizing: content-box;
+    color: rgb(255, 255, 255);
+    height: 25px;
+    min-width: 276px;
+    text-decoration: none solid rgb(255, 255, 255);
+    white-space: nowrap;
+    width: 310.5px;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 162.25px 19px;
+    transform-origin: 162.25px 19px;
+    caret-color: rgb(255, 255, 255);
+    background: rgb(147, 184, 116) none repeat scroll 0% 0% / auto padding-box border-box;
+    border-top: 0px none rgb(255, 255, 255);
+    border-right: 0px none rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-left: 0px none rgb(255, 255, 255);
+    font: normal normal normal normal 22.4px / normal Helvetica, arial, sans-serif;
+    margin: 0px 8px 0px 0px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 7px 7px 4px;
+}/*#INPUT_6*/
+
+#INPUT_7 {
+    background-position: 50% 50%;
+    bottom: 18px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    left: 503.5px;
+    position: absolute;
+    right: 456.5px;
+    text-align: center;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-indent: -500px;
+    top: 15px;
+    vertical-align: top;
+    white-space: pre;
+    width: 85px;
+    column-rule-color: rgb(255, 255, 255);
+    align-items: flex-start;
+    perspective-origin: 42.5px 20px;
+    transform-origin: 42.5px 20px;
+    user-select: none;
+    caret-color: rgb(255, 255, 255);
+    background: rgb(173, 201, 150) url("http://pad1.whstatic.com/skins/owl/images/search.png") no-repeat scroll 50% 50% / 25px padding-box border-box;
+    border: 0px none rgb(255, 255, 255);
+    border-radius: 4px 4px 4px 4px;
+    font: normal normal bold normal 16px / normal system-ui;
+    margin: 1px 0px 0px -155px;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 10px 11px;
+}/*#INPUT_7*/
