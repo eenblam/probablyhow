@@ -18,13 +18,13 @@
 		</div>
 	</div>
 
-  {% for img, text in steps %}
+  {% for i, title, text in steps %}
 	<div class="row">
 		<div class="col-sm-8 offset-sm-2 mt-5">
 		<div class="card">
-			<h3 class="card-header"></h3>
+      <h3 class="card-header">{{ i }}. {{ title }}</h3>
 			<div class="card-block">
-				<h4 class="card-title"></h4>
+        <h4 class="card-title"></h4>
 				<p class="card-text">{{ text }}</p>
 			</div>
 		</div>

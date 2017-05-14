@@ -1,4 +1,4 @@
-from probablyhow.markov import rand_sentences_from_query
+from probablyhow.markov import rand_steps_from_query
 from flask import Flask, redirect, render_template, request, url_for
 
 #from pdb import set_trace; set_trace()
@@ -12,9 +12,10 @@ def index():
 @app.route('/to')
 def search():
     task = request.args.get('task', '').replace('+', '%20')
-    text_results = rand_sentences_from_query(task, 5, 10)
-    paired_results = (('IMAGE', text) for text in text_results)
-    return render_template('results.html', task=task, steps=paired_results)
+    steps = rand_steps_from_query(task, 140, 5, 10)
+    counted_steps = ((i, title, text) for (i, (title, text))
+            in enumerate(steps, 1))
+    return render_template('results.html', task=task, steps=counted_steps)
 
 if __name__ == '__main__':
     app.run()

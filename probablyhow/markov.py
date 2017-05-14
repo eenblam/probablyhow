@@ -18,3 +18,15 @@ def rand_sentences_from_query(query, min_count, max_count):
     count = randint(min_count, max_count)
     for _ in range(count):
         yield model.make_sentence()
+
+def rand_step(model, char_count, max_sentences):
+    count = randint(1, max_sentences)
+    title = model.make_short_sentence(char_count)
+    text = ' '.join(model.make_sentence() for _ in range(count))
+    return title, text
+
+def rand_steps_from_query(query, title_count, min_sentences, max_sentences):
+    model = model_from_query(query)
+    count = randint(min_sentences, max_sentences)
+    for _ in range(count):
+        yield rand_step(model, title_count, max_sentences)
