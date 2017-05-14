@@ -18,3 +18,17 @@ git clone https://github.com/eenblam/probablyhow.git
 cd probablyhow
 python setup.py install
 ```
+
+## Usage
+
+```bash
+$ howto turn off a banana
+1: First, using a spatula.
+2: Add the mashed bananas.
+3: For some people, a banana until it is beaten.
+4: Remove from the freezer.
+5: Pack a lunch and strike out for a long time even if they are working on.
+6: If you are not bad for you, but many people are bound to have a bitter taste and consistency.
+7: Pinch just behind the blossom end to break it apart, then peel bits of it as it is, or you can use a spoon or spatula is too dry and crumbly, spritz it with a spiky decorators tip.
+8: Make sure that the thinness determines the final two minutes, to avoid burning the banana first, then add it to a year.
+```
