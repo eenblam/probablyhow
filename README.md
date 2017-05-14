@@ -1,5 +1,5 @@
-# Probably How
-A terrible markov chain app that aggregates WikiHow articles
+# probablyHow
+A terrible markov chain app that aggregates wikiHow articles
 by leveraging [bleeding edge](https://github.com/jsvine/markovify) [AI](https://imgur.com/ZeSy3Zu)
 to bring you the best instructional content available at your command line.
 
