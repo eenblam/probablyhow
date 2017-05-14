@@ -20,6 +20,7 @@ python setup.py install
 ```
 
 ## Usage
+Here are some actual examples that we've gotten back from the model.
 
 ```bash
 $ howto turn off a banana
@@ -31,4 +32,14 @@ $ howto turn off a banana
 6: If you are not bad for you, but many people are bound to have a bitter taste and consistency.
 7: Pinch just behind the blossom end to break it apart, then peel bits of it as it is, or you can use a spoon or spatula is too dry and crumbly, spritz it with a spiky decorators tip.
 8: Make sure that the thinness determines the final two minutes, to avoid burning the banana first, then add it to a year.
+
+$ howto hack the planet
+1: Enter values next to any other resources you want to give them your email so they may be required to log in yet!
+2: Put in your browser.
+3: Hack tools developed for Head Soccer using an online hack tools may be banned or suspended at any time for failing to adhere to the menu immediately.
+4: You may also comment on the Ultimate Free Cheats site to limit downloads on the Head Soccer hack tool to work.
+5: In general, these are the only options you can enter your email if you want added to your account.
+6: It may also be because the information you can unblock them if you experience difficulty with accessing surveys or access Head Soccer offers unlimited points throughout gameplay.
+7: A backup account is like a second account that you use an Android device, you can access without having the door closed is limited and fairly harmless . In order to get it back and how to avoid losing your account.
+8: This will help you when you forget your password.
 ```
