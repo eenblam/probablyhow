@@ -2,6 +2,11 @@ import BeautifulSoup
 import requests
 
 url = 'https://www.wikihow.com/api.php'
+headers = {
+        'User-Agent': 'ProbablyHow User Agent',
+        'From': 'github.com/eenblam/probablyhow/issues'
+    }
+
 data_query = {
         'format': 'json',
         'action': 'query',
@@ -24,7 +29,7 @@ data_parse = {
 def title_string_from_query(query):
     params = {'srsearch': query}
     params.update(data_query)
-    j = requests.get(url, params).json()
+    j = requests.get(url, params, headers=headers).json()
     titles = (x['title'] for x in j['query']['search'])
     return '|'.join(titles)
 
@@ -33,14 +38,14 @@ def titles_to_pageids(title_string):
     params = {'titles': title_string}
     params.update(data_titles)
     del params['export']
-    r = requests.get(url, params).json()
+    r = requests.get(url, params, headers=headers).json()
     for pageid in r['query']['pages'].keys():
         yield pageid
 
 def get_page_by_id(pageid):
     params = {'pageid': pageid}
     params.update(data_parse)
-    return requests.get(url, params).json()
+    return requests.get(url, params, headers=headers).json()
 
 def get_pairs(title_string):
     result_stream = (get_page_by_id(pageid)['parse'] for pageid

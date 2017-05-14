@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+  <title>How to {{ task }}</title>
+</head>
+<body>
+  <h1>probablyHow to... {{ task }}</h1>
+  <ol>
+  {% for img, text in steps %}
+  <li>
+    <p>{{ text }}</p>
+  </li>
+  {% endfor %}
+  <ol>
+	<p id="disclaimer">
+	Text generated randomly from wikiHow.com content, used under Creative Commons license.
+	</p>
+</body>
+</html>
