@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="472px" height="68px" viewBox="0 0 472 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="470px" height="68px" viewBox="0 0 470 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+    <title>probablyhow-logo</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="71" font-family="BookmanOldStyle-Bold, Bookman Old Style" font-weight="bold">
         <g id="probablyhow-logo" transform="translate(-2.000000, -16.000000)">
-            <g id="Group">
-                <g id="How" transform="translate(313.000000, 2.000000)" fill="#FFFFFF">
-                    <text id="Ho">
-                        <tspan x="0.489014" y="67">Ho</tspan>
-                    </text>
-                    <text id="w">
-                        <tspan x="104.724854" y="67">w</tspan>
+            <g id="How" transform="translate(313.000000, 2.000000)" fill="#FFFFFF">
+                <g>
+                    <text>
+                        <tspan x="0.489014" y="67">How</tspan>
                     </text>
                 </g>
-                <g id="probably" fill="#444F45">
-                    <text id="probabl">
-                        <tspan x="0.654052734" y="67">probabl</tspan>
-                    </text>
-                    <text id="y">
-                        <tspan x="266.317627" y="67">y</tspan>
-                    </text>
-                </g>
+            </g>
+            <g id="probably" fill="#444F45">
+                <text>
+                    <tspan x="0.654052734" y="67">probably</tspan>
+                </text>
             </g>
         </g>
     </g>
