@@ -18,7 +18,7 @@ cd probablyhow
 python setup.py install
 ```
 
-## Usage
+## Command Line Usage
 Here are some actual examples that we've gotten back from the model.
 
 ```bash
@@ -42,3 +42,20 @@ $ howto hack the planet
 7: A backup account is like a second account that you use an Android device, you can access without having the door closed is limited and fairly harmless . In order to get it back and how to avoid losing your account.
 8: This will help you when you forget your password.
 ```
+
+## Web Server
+To run the Flask application locally, run the following after following the above installation steps:
+
+```bash
+cd probablyhow
+export FLASK_APP=app.py
+flask run
+```
+
+Note that you'll want this behind an actual web server, with actual WSGI support.
+Major performance concerns exist.
+As WikiHow only supports the bare minimum of the MediaWiki API offerings,
+a number of round trips are needed to fetch training data.
+(There's opportunity for caching pages here, if anyone is into that.)
+Each request also generates a new Markov model,
+which slows things down as well.

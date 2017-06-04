@@ -6,8 +6,10 @@ setup(
         py_modules='howto.py',
         packages=find_packages(),
         install_requires=[
+            'BeautifulSoup',
+            'flask',
             'markovify',
-            'BeautifulSoup'
+            'requests'
             ],
         entry_points={
             'console_scripts': [
