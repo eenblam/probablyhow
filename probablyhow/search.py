@@ -27,6 +27,9 @@ data_parse = {
     }
 
 def title_string_from_query(query):
+    default_query = 'ask better questions'
+    query = query if query.strip() else default_query
+    from pdb import set_trace; set_trace()
     params = {'srsearch': query}
     params.update(data_query)
     j = requests.get(url, params, headers=headers).json()
@@ -35,7 +38,7 @@ def title_string_from_query(query):
         return '|'.join(titles)
     else:
         # Handle this in the worst way possible
-        return title_string_from_query('ask better questions')
+        return title_string_from_query(default_query)
 
 def titles_to_pageids(title_string):
     """Get pageids from title string"""
