@@ -1,0 +1,16 @@
+BeautifulSoup==3.2.1
+certifi==2017.4.17
+chardet==3.0.3
+click==6.7
+Flask==0.12.2
+gunicorn==19.7.1
+idna==2.5
+itsdangerous==0.24
+Jinja2==2.9.6
+markovify==0.6.0
+MarkupSafe==1.0
+probablyhow==0.0.1
+requests==2.17.3
+Unidecode==0.4.20
+urllib3==1.21.1
+Werkzeug==0.12.2
