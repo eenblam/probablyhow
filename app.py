@@ -1,7 +1,6 @@
 from probablyhow.markov import rand_steps_from_query
 from flask import Flask, redirect, render_template, request, url_for
 
-#from pdb import set_trace; set_trace()
 app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
