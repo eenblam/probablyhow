@@ -27,17 +27,12 @@ data_parse = {
     }
 
 def title_string_from_query(query):
-    default_query = 'ask better questions'
-    query = query if query.strip() else default_query
-    params = {'srsearch': query}
+    params = {'srsearch': query.strip()}
     params.update(data_query)
     j = requests.get(url, params, headers=headers).json()
+    #TODO Handle bad response
     titles = [x['title'] for x in j['query']['search']]
-    if titles:
-        return '|'.join(titles)
-    else:
-        # Handle this in the worst way possible
-        return title_string_from_query(default_query)
+    return '|'.join(titles)
 
 def titles_to_pageids(title_string):
     """Get pageids from title string"""
