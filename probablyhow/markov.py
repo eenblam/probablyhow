@@ -2,19 +2,17 @@ from random import randint
 
 import markovify
 
-from search import gen_pairs_from_query
-
-def get_corpus(query):
-    pairs = gen_pairs_from_query(query)
+def get_corpus(pairs):
+    #TODO Build title corpus from title stream
     texts = (x for _,x in pairs)
     return ' '.join(texts)
 
-def model_from_query(query):
-    corpus = get_corpus(query)
+def model_from_pairs(pairs):
+    corpus = get_corpus(pairs)
     return markovify.Text(corpus)
 
-def rand_sentences_from_query(query, min_count, max_count):
-    model = model_from_query(query)
+def rand_sentences_from_pairs(pairs, min_count, max_count):
+    model = model_from_pairs(pairs)
     count = randint(min_count, max_count)
     for _ in range(count):
         yield model.make_sentence()
@@ -25,8 +23,8 @@ def rand_step(model, char_count, max_sentences):
     text = ' '.join(model.make_sentence() for _ in range(count))
     return title, text
 
-def rand_steps_from_query(query, title_count, min_sentences, max_sentences):
-    model = model_from_query(query)
+def rand_steps_from_pairs(pairs, title_count, min_sentences, max_sentences):
+    model = model_from_pairs(pairs)
     count = randint(min_sentences, max_sentences)
     for _ in range(count):
         yield rand_step(model, title_count, max_sentences)
