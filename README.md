@@ -1,9 +1,10 @@
 # probablyHow
-Check the app out at [probablyhow.wiki](http://probablyhow.wiki).
-
-A terrible markov chain app that aggregates wikiHow articles
+probablyHow is a terrible markov chain app that aggregates wikiHow articles
 by leveraging [bleeding edge](https://github.com/jsvine/markovify) [AI](https://imgur.com/ZeSy3Zu)
-to bring you the best instructional content available at your command line.
+to bring you the best instructional content you never wanted.
+
+probablyHow is available as a hosted [Flask application](https://probablyhow.herokuapp.com)
+and as a command-line client.
 
 Created by [@eenblam](https://github.com/eenblam) and [@squigglydonut](https://github.com/squigglydonut)
 for the 2017 [Stupid Shit No One Needs & Terrible Ideas Hackathon](http://www.stupidhackathon.com/)
@@ -54,10 +55,7 @@ export FLASK_APP=app.py
 flask run
 ```
 
-Note that you'll want this behind an actual web server, with actual WSGI support.
-Major performance concerns exist.
-As WikiHow only supports the bare minimum of the MediaWiki API offerings,
-a number of round trips are needed to fetch training data.
-(There's opportunity for caching pages here, if anyone is into that.)
-Each request also generates a new Markov model,
-which slows things down as well.
+Note that this is rather slow because:
+1. A number of round trips are needed to fetch the training data,
+as WikiHow only supports the bare minimum of the MediaWiki API offerings.
+2. Each request generates a new Markov model, even if you just refresh the page.
