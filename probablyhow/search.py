@@ -42,7 +42,14 @@ class APICall(object):
             'srsearch': query.strip()
         }
         r = self.get_JSON(params)
-        return process.process_title_response(r)
+        try:
+            hits = r['query']['searchinfo']['totalhits']
+        except KeyError:
+            raise CannotCompleteRequestError('Cannot retrieve number of search hits')
+        if hits < 1:
+            raise CannotCompleteRequestError('Search produced no results')
+        return r
+
 
     def get_pageids_from_title_string(self, title_string):
         """Get pageids from title string"""
@@ -73,15 +80,18 @@ class APICall(object):
                 continue
             yield page
 
-    def query(self, query, backup_query):
+    def query(self, query):
         """Return generator of (title,text) pairs"""
-        title_string = self.search_for_titles(query)
-        if title_string == '':
-            title_string = self.search_for_titles(backup_query)
+        try:
+            title_data = self.search_for_titles(query)
+            title_string = process.process_title_response(title_data)
+            pageid_response = self.get_pageids_from_title_string(title_string)
+            pageids = process.process_pageid_response(pageid_response)
+            results = self.get_pages_by_id(pageids)
 
-        pageid_response = self.get_pageids_from_title_string(title_string)
-        pageids = process.process_pageid_response(pageid_response)
-        results = self.get_pages_by_id(pageids)
+        except RequestError as e:
+            # Can't complete, so bail. Retry from top level if necessary.
+            raise CannotCompleteRequestError()
 
         text_stream = process.process_page_stream(results)
         clean_stream = ((title, process.plain_corpus(text))
