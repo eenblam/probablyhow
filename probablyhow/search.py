@@ -1,7 +1,7 @@
 import requests
 
 import process
-from util import RequestError
+from util import CannotCompleteRequestError, RequestError
 
 class APICall(object):
     def __init__(self):
