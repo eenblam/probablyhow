@@ -84,3 +84,13 @@
     outline: rgb(255, 255, 255) none 0px;
     padding: 10px 11px;
 }/*#INPUT_7*/
+
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+}
+footer a {
+    color: #0366d6;
+}
