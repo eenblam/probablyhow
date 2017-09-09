@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="477px" height="75px" viewBox="0 0 477 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
-    <desc>Created with Sketch.</desc>
+<svg width="435px" height="75px" viewBox="0 0 435 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="71" font-family="BookmanOldStyle-Bold, Bookman Old Style" font-weight="bold">
-        <g id="Artboard" transform="translate(-1.000000, -20.000000)">
-            <g id="Group" transform="translate(-1.000000, 0.000000)">
-                <text id="How" fill="#FFFFFF">
-                    <tspan x="320.489014" y="75">How</tspan>
-                </text>
-                <text id="probably" fill="#444F45">
-                    <tspan x="0.654052734" y="75">probably</tspan>
+        <g id="Artboard" transform="translate(0.000000, -25.000000)">
+            <g id="Group" transform="translate(0.000000, 0.000000)">
+                <text fill="#444F45">
+                    <tspan fill="#444F45" y="75">probably</tspan>
+                    <tspan fill="#FFFFFF" y="75">How</tspan>
                 </text>
             </g>
         </g>
