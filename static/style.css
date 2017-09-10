@@ -87,8 +87,6 @@
 
 footer {
     width: 100%;
-    bottom: 0;
-    position: fixed;
     text-align: center;
 }
 footer a {
