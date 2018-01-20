@@ -5,8 +5,6 @@ import BeautifulSoup
 
 from util import CannotCompleteRequestError
 
-Page = namedtuple('Page', ['title', 'text'])
-
 def process_title_response(response):
     """Produce a title string from results of initial search
 
@@ -40,7 +38,6 @@ def process_page_data(data):
     title = data['parse']['title']
     text = data['parse']['text']['*']
     if title and text:
-        #return Page(title, text)
         return (title, text)
     return None
 
@@ -55,8 +52,9 @@ def process_page_stream(stream):
         if page is not None:
             found_one = True
             yield page
-        if not found_one:
-            raise CannotCompleteRequestError('All parsed pages invalid')
+
+    if not found_one:
+        raise CannotCompleteRequestError('All parsed pages invalid')
 
 def strip_tags(html_corpus):
     """Strip HTML tags from article text"""
