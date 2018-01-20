@@ -94,7 +94,7 @@ class APICall(object):
             raise CannotCompleteRequestError()
 
         text_stream = process.process_page_stream(results)
-        clean_stream = ((title, process.plain_corpus(text))
+        clean_stream = ((title, process.clean_corpus(text))
                         for title, text in text_stream)
         # lol "clean." It's not. Someone please XSS me via WikiHow before I fix this.
         return clean_stream

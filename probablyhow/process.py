@@ -58,12 +58,12 @@ def process_page_stream(stream):
         if not found_one:
             raise CannotCompleteRequestError('All parsed pages invalid')
 
-def gen_corpus_chunks(html_corpus):
-    """Yield text content of article HTML tags"""
+def strip_tags(html_corpus):
+    """Strip HTML tags from article text"""
     soup = BeautifulSoup.BeautifulSoup(html_corpus)
-    for tag in soup.recursiveChildGenerator():
-        if tag.string is not None:
-            yield tag.string
+    strings = (tag.string for tag in soup.recursiveChildGenerator()
+               if tag.string is not None)
+    return ' '.join(strings)
 
 def remove_button_text(article):
     """Remove artifacts of buttons from article markup
@@ -76,7 +76,6 @@ def remove_button_text(article):
         article = sub(pat, ' ', article)
     return article
 
-def plain_corpus(html_corpus):
+def clean_corpus(html_corpus):
     """Clean HTML tags and button text from articles"""
-    corpus = ' '.join(gen_corpus_chunks(html_corpus))
-    return remove_button_text(corpus)
+    return remove_button_text(strip_tags(html_corpus))
