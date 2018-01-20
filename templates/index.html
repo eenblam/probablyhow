@@ -3,18 +3,16 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="/static/style.css">
-<title>probablyHow to...</title>
+	<title>probablyHow to {{ suggested_task }}</title>
 </head>
 <body>
-
 	<div class="container-fluid nav1 nav">
 		<div>
 		<img src="/static/probablyhow-logo.svg" class="logo1">
 		</div>
-
 		<div class="input-group col-md-4 hidden-sm-down">
 		<form id="FORM_5" name="search_site" action="/to" method="get">
-			<input type="text" name="task" placeholder="to do anything..." id="INPUT_6" />
+			<input type="text" name="task" placeholder="to {{ suggested_task }}" id="INPUT_6" />
 			<input type="submit" value="Search" id="INPUT_7" />
 		</form>
 		</div>

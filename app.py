@@ -1,13 +1,14 @@
 from probablyhow.markov import rand_steps_from_pairs
 from probablyhow.search import APICall
 from probablyhow.util import CannotCompleteRequestError
+from probablyhow.suggestions import random_task
 from flask import Flask, redirect, render_template, request, url_for
 
 app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return render_template('index.html', suggested_task=random_task())
 
 @app.route('/to')
 def search():
