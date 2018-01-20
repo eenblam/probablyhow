@@ -7,7 +7,10 @@ from util import CannotCompleteRequestError
 Page = namedtuple('Page', ['title', 'text'])
 
 def process_title_response(response):
-    """Just fetch the first 10, ignore pagination"""
+    """Produce a title string from results of initial search
+
+    Just fetch the first 10, ignoring pagination
+    """
     try:
         results = response['query']['search']
         titles = (x['title'] for x in results)
@@ -20,13 +23,14 @@ def process_title_response(response):
     return title_string
 
 def process_pageid_response(response):
+    """Retrieve pageids from response to query for title string, then yield each"""
     try:
         pages = response['query']['pages']
         keys = pages.keys()
     except KeyError:
-        raise CannotCompleteRequestError('Cannot produce pageid list from response')
+        raise CannotCompleteRequestError('Cannot generate pageids from response')
     except AttributeError:
-        raise CannotCompleteRequestError('Cannot produce pageid list from response')
+        raise CannotCompleteRequestError('Cannot generate pageids from response')
     for key in keys:
         yield key
 
@@ -54,12 +58,12 @@ def process_page_stream(stream):
             raise CannotCompleteRequestError('All parsed pages invalid')
 
 def gen_corpus_chunks(html_corpus):
+    """Yield text content of article HTML tags"""
     soup = BeautifulSoup.BeautifulSoup(html_corpus)
     for tag in soup.recursiveChildGenerator():
         if tag.string is not None:
             yield tag.string
 
 def plain_corpus(html_corpus):
+    """Clean tags from HTML string"""
     return ' '.join(gen_corpus_chunks(html_corpus))
-
-
