@@ -1,4 +1,5 @@
 from collections import namedtuple
+from re import sub
 
 import BeautifulSoup
 
@@ -64,6 +65,18 @@ def gen_corpus_chunks(html_corpus):
         if tag.string is not None:
             yield tag.string
 
+def remove_button_text(article):
+    """Remove artifacts of buttons from article markup
+    
+    A rather unfortunate hack
+    """
+    bad_strings = ['Edit Edit', 'Warnings Warnings', 'Steps Steps']
+    for bad_string in bad_strings:
+        pat = ' ?{} ?'.format(bad_string)
+        article = sub(pat, ' ', article)
+    return article
+
 def plain_corpus(html_corpus):
-    """Clean tags from HTML string"""
-    return ' '.join(gen_corpus_chunks(html_corpus))
+    """Clean HTML tags and button text from articles"""
+    corpus = ' '.join(gen_corpus_chunks(html_corpus))
+    return remove_button_text(corpus)
