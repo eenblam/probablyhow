@@ -12,4 +12,4 @@ MarkupSafe==1.0
 requests==2.17.3
 Unidecode==0.4.20
 urllib3==1.21.1
-Werkzeug==0.12.2
+Werkzeug==0.15.3
