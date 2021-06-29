@@ -1,4 +1,7 @@
 # probablyHow
+
+**This repo is archived and won't be updated further. If you want to give it a spin, you'll probably need to do some work to update the dependencies and get it working in Python3. This would probably be better as an SPA, though.**
+
 probablyHow is a terrible markov chain app that aggregates wikiHow articles
 by leveraging [bleeding edge](https://github.com/jsvine/markovify) [AI](https://imgur.com/ZeSy3Zu)
 to bring you the best instructional content you never wanted.
